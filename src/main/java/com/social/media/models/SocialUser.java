@@ -26,7 +26,7 @@ public class SocialUser {
     @EqualsAndHashCode.Exclude
     private List<Post> posts = new ArrayList<>();
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @EqualsAndHashCode.Exclude
     @JoinTable(
             name = "user_group",
